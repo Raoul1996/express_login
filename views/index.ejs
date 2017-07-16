@@ -7,6 +7,14 @@
 </head>
 <body>
 <h1>This is the Index Page</h1>
+<% if(user && user.username) { %>
+<p>
+    <% user.username %>
+    hello welcome to Index</p>
+<a href="/logout">exit</a>
+<% }else{ %>
+<p>please login! </p>
 <a href="/login">Login Page</a><a href="/register">Register Page</a>
+<% } %>
 </body>
 </html>

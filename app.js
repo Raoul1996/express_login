@@ -5,12 +5,12 @@ let logger = require('morgan')
 let cookieParser = require('cookie-parser')
 let bodyParser = require('body-parser')
 let session = require('express-session')
+// let session_const = require('./util/const')
 
 let index = require('./routes/index')
 let users = require('./routes/users')
 let login = require('./routes/login')
 let register = require('./routes/register')
-
 let app = express()
 
 // view engine setup
@@ -25,7 +25,14 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.use()
+app.use(session({
+  // the const named secret declared in the util/const.js
+  secret: 'this_is_raoul_and_Jessica',
+  cookie: {
+    maxAge: 15 * 60 * 1000,
+    secure: false
+  }
+}))
 
 
 app.use('/', index)
