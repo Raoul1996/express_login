@@ -2,7 +2,49 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-
-a {
-  color: #00B7FF;
+body .form-area {
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 2em;
+  clear: both;
+  border: 1px solid #999;
+}
+body .form-area .title {
+  text-align: center;
+  margin-bottom: 2em;
+}
+body .form-area form {
+  display: block;
+}
+body .form-area form label {
+  display: flex;
+  height: 2em;
+  margin: 1em auto;
+}
+body .form-area form label span {
+  flex: 0 0 30%;
+  width: 30%;
+  font-size: 1.2em;
+}
+body .form-area form label input {
+  flex: 1;
+  width: 100%;
+  padding: 0 1em;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 2px;
+}
+body .form-area .link {
+  clear: both;
+}
+body .form-area .link a {
+  color: rgba(0,0,0,0.5);
+  text-decoration: none;
+  margin-left: 3em;
+  float: right;
+}
+body p {
+  text-align: center;
+  margin: 5em auto;
 }

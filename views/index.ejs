@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>index</title>
-    <!--<link rel="stylesheet" href="../stylesheet/style.css">-->
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
-<h1>This is the Index Page</h1>
-<% if(user && user.username) { %>
-<p>
-    <% user.username %>
-    hello welcome to Index</p>
-<a href="/logout">exit</a>
-<% }else{ %>
-<p>please login! </p>
-<a href="/login">Login Page</a><a href="/register">Register Page</a>
-<% } %>
+<div class="form-area">
+    <h1 class="title">This is the Index Page</h1>
+    <% if(user && user.username) { %>
+    <p>
+        <% user.username %>
+        hello welcome to Index</p>
+    <a href="/logout">exit</a>
+    <% }else{ %>
+    <p>please login! </p>
+    <div class="link"><a href="/login">Login Page</a><a href="/register">Register Page</a>
+    </div>
+    <% } %>
+</div>
 </body>
 </html>

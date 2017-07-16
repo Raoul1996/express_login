@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>index</title>
-    <!--<link rel="stylesheet" href="../stylesheet/style.css">-->
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
-<h1>This is the Index Page</h1>
-<form action="/login" method="post">
-    <label for=""><span>Account:</span><input type="text" name="username"></label>
-    <label for=""><span>Password:</span><input type="password" name="password"></label>
-    <input type="submit" value="Login">
+<div class="form-area">
+    <h1 class="title">This is the Login Page</h1>
+    <form action="/login" method="post">
+        <label for=""><span>Account:</span><input type="text" name="username"
+                                                  placeholder="please input your username"></label>
+        <label for=""><span>Password:</span><input type="password" name="password" placeholder="please input your password"></label>
+        <label for=""><input type="submit" value="Login"></label>
+        <div class="link"><a href="/register">A new for express login?</a></div>
+</div>
 </form>
-<a href="/register">A new for express login?</a>
 </body>
 </html>

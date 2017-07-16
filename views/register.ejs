@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>index</title>
-    <!--<link rel="stylesheet" href="../stylesheet/style.css">-->
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
-<h1>This is the Register Page</h1>
-<form action="/register" method="post" id="reg-form">
-    <label for=""><span>username:</span><input type="text" name="username"></label>
-    <label for=""><span>password:</span><input type="password" name="password"></label>
-    <label for=""><span>confirm:</span><input type="password" name="password-confirm"></label>
-    <input type="submit" value="Register"/>
-</form>
-<a href="/login">Already has a username?</a>
+<div class="form-area">
+    <h1 class="title">This is the Register Page</h1>
+    <form action="/register" method="post" id="reg-form">
+        <label for=""><span>username:</span><input type="text" name="username" placeholder="please input your username"></label>
+        <label for=""><span>password:</span><input type="password" name="password"
+                                                   placeholder="please input your password"></label>
+        <label for=""><span>confirm:</span><input type="password" name="password-confirm"
+                                                  placeholder="please confirm your password"></label>
+        <label><input type="submit" value="Register"/></label>
+    </form>
+    <div class="link"><a href="/login">Already has a username?</a></div>
+
+</div>
 <script>
   (function (g, undefined) {
     let form = document.querySelector('#reg-form')
