@@ -6,7 +6,35 @@
     <!--<link rel="stylesheet" href="../stylesheet/style.css">-->
 </head>
 <body>
-<h1>This is the Index Page</h1>
-<a href="/login">Login Page</a><a href="/register">Register Page</a>
+<h1>This is the Register Page</h1>
+<form action="/register" method="post" id="reg-form">
+    <label for=""><span>username:</span><input type="text" name="username"></label>
+    <label for=""><span>password:</span><input type="password" name="password"></label>
+    <label for=""><span>confirm:</span><input type="password" name="password-confirm"></label>
+    <input type="submit" value="Register"/>
+</form>
+<a href="/login">Already has a username?</a>
+<script>
+  (function (g, undefined) {
+    let form = document.querySelector('#reg-form')
+    let username = document.querySelector('input[name=username]')
+    let password = document.querySelector('input[name=password]')
+    let rePassword = document.querySelector('input[name=password-confirm]')
+    form.addEventListener('submit', function (e) {
+      e = e || e.event
+      e.preventDefault()
+      if (username.value === '' || password.value === '') {
+        alert('please input the username and password')
+        return false
+      }
+      if (rePassword.value === '' || rePassword.value !== password.value) {
+        alert('please check your password-confirm')
+        return false
+      }
+      this.submit()
+
+    }, false)
+  })(this)
+</script>
 </body>
 </html>
